@@ -20,27 +20,72 @@ const images = [
     { src: './images/sun.jpg', name: 'SunFlower' },
 ];
 
-//const blurredImage = document.getElementById('blurredImage');
-//blurredImage.src = './images/lotus.jpg';
+let currentImageObj;
+currentImageObj = images[Math.floor(Math.random() * images.length)];
 
-let currentImage;
-
-currentImage = images[Math.floor(Math.random() * images.length)];
 const blurredImage = document.getElementById('blurredImage');
-blurredImage.src = currentImage.src;
+blurredImage.src = currentImageObj.src;
 
-const userGuess = window.prompt("Guess the name of the flower");
-console.log(currentImage.name);
+
+let currentImage = currentImageObj.name.trim().toLowerCase();
+console.log(`currentImage: ${currentImage}`);
+
+let userGuess = window.prompt("Guess the name of the flower");
+userGuess = userGuess.trim().toLowerCase();
+console.log(`UserGuess: ${userGuess}`);
+if (userGuess === currentImage) {
+    alert(`Correct! Its a ${currentImageObj.name}.`)
+} else {
+    alert(`Wrong guess! Try again.`);
+}
+
+
+
+
+
+
+//currentImage = images[Math.floor(Math.random() * images.length)];
+//const blurredImage = document.getElementById('blurredImage');
+//blurredImage.src = currentImage.src;
+
+//const userGuess = window.prompt("Guess the name of the flower");
+//console.log(currentImage.name);
 
 //validating input
-if (userGuess) {
-    userGuess1 = userGuess.trim().toLowerCase();
-    if (userGuess1 === currentImage.name) {
-        alert(`Correct! Its a ${currentImage.name}.`)
-    } else {
-        alert(`Wrong guess! Try again.`);
-    }
+//if (userGuess) {
+//    userGuess1 = userGuess.trim().toLowerCase();
+//    if (userGuess1 === currentImage.name) {
+//        alert(`Correct! Its a ${currentImage.name}.`)
+//    } else {
+//        alert(`Wrong guess! Try again.`);
+//    }
 
-} else {
-    alert('Please enter a valid guess.');
-}
+//} else {
+//    alert('Please enter a valid guess.');
+//}
+
+//function startGame() {
+//    currentImage = images[Math.floor(Math.random() * images.length)];
+//    const blurredImage = document.getElementById('blurredImage');
+//    blurredImage.src = currentImage.src;
+//    handleGuess();
+//}
+
+//function handleGuess() {
+//    const userGuess = window.prompt("Guess the name of the flower");
+//    if (userGuess) {
+//        userGuess1 = userGuess.trim().toLowerCase();
+//        if (userGuess1 === currentImage.name) {
+//            alert(`Correct! Its a ${currentImage.name}.`)
+//        } else {
+//            alert(`Wrong guess! Try again.`);
+//            handleGuess(); //asking to guess again
+//        }
+
+//    } else {
+//        alert('Please enter a valid guess.');
+//        handleGuess(); //prompting again if input is invalid
+//    }
+//}
+
+//startGame();
