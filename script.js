@@ -20,6 +20,11 @@ const images = [
     { src: './images/sun.jpg', name: 'sunFlower' },
 ];
 
-//let currentImage;
+//const blurredImage = document.getElementById('blurredImage');
+//blurredImage.src = './images/lotus.jpg';
+
+let currentImage;
+
+currentImage = images[Math.floor(Math.random() * images.length)];
 const blurredImage = document.getElementById('blurredImage');
-blurredImage.src = './images/lotus.jpg';
+blurredImage.src = currentImage.src;
