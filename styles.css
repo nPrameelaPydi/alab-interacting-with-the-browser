@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #f0f0f0;
+}
+
+#imageContainer {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+img {
+    width: 100%;
+    filter: blur(30px);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+}
