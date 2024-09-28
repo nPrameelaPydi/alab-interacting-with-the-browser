@@ -49,6 +49,9 @@ setTimeout(() => {
         userGuess = window.prompt("Guess the name of the flower");
         console.log(userGuess);
         if (userGuess === null) {
+            break;
+            //alert(`Please enter a valid guess.`);
+        } else if (userGuess === '') {
             alert(`Please enter a valid guess.`);
         } else {
             userGuess = userGuess.trim().toLowerCase();
