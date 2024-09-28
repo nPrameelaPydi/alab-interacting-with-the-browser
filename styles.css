@@ -12,7 +12,7 @@ body {
 
 img {
     width: 100%;
-    filter: blur(30px);
+    filter: blur(10px);
 }
 
 #message {
